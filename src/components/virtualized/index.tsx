@@ -73,6 +73,7 @@ export default function InfiniteScrollWithVirtualizationAndTanstackQuery<
   const windowVirtualizer = useWindowVirtualizer({
     count: items.length,
     estimateSize: virtualizerOptions?.estimateSize ?? (() => 35),
+    enabled: !virtualizerOptions?.getScrollElement,
     ...virtualizerOptions,
   });
 
